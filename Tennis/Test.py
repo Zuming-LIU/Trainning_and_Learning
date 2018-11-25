@@ -7,13 +7,13 @@ import time
 from player import Player
 from game import Game
 
-# Name 2 players
-player1 = Player('ACC')
-player2 = Player('TDF')
-
-# Name this game
+# Name 2 players for a round of tennis
+name_player1 = "ACC";
+name_player2 = "TDF";
+player1 = Player(name_player1)
+player2 = Player(name_player2)
 Round = Game(player1,player2)
-
+print ("Round begins, " + name_player1 + " vs " + name_player2 + ":")
 # Loop until there is a winner
 while (Round._hasWinner() == False):    
     # Generate a random variable to find the winner of a ball

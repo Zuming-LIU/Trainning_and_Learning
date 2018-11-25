@@ -33,7 +33,7 @@ class Game:
                 self.winner = pointWinner;
             elif (pointLoser.score == 3 and pointLoser._hasAdvanture):# 40 vs AD and the one with AD fails
                 pointLoser.loseAdvantage();
-                print (pointWinner.name +  ' wins a point, his(her) opponent lost advantage: ' + self.points[self.player1.score] + ' vs ' + self.points[self.player2.score]);
+                print (pointWinner.name +  ' wins a point,' + self.points[self.player1.score] + ' vs ' + self.points[self.player2.score]);
             else:   #40 vs 40, set advantage
                 pointWinner.getAdvantage();
                 print (pointWinner.name +  ' wins a point and he(she) gets the advantage ! ')
