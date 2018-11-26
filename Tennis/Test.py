@@ -29,5 +29,5 @@ while (Round._hasWinner() == False):
 
 # When a winner is founda, quit loop and end this round
 winner = Round.winner;
-print (winner.name +  ' wins this round');
+print ('Set, ' + winner.name +  ' wins this round ');
 
