@@ -1,3 +1,4 @@
+# Made by Zuming LIU, the 26/11/2018
 # This script details the rules to get points and to win a round of Tennis
 # -*- coding: utf-8 -*-
 
@@ -17,11 +18,10 @@ class Game:
         if(nameWinner == self.player1.name):
             pointWinner = self.player1;
             pointLoser = self.player2;
-        elif(nameWinner == self.player2.name):
+        else:
             pointWinner = self.player2;
             pointLoser = self.player1;
-        else:
-            print("Error about a player name");
+
 
         # Add points and decide winner of a round
         if (pointWinner.score < 3 ): # [0 , 15, 30] vs [0 , 15, 30]
@@ -29,12 +29,15 @@ class Game:
             print (pointWinner.name +  ' wins a point, ' + self.points[self.player1.score] + ' vs ' + self.points[self.player2.score]);
 
         elif (pointWinner.score == 3):
-            if (pointLoser.score <= 2 or pointWinner._hasAdvanture): #40 vs [0 , 15, 30] or 40 vs AD and the one with AD wins
+            #40 vs [0 , 15, 30] or 40 vs AD and the one with AD wins
+            if (pointLoser.score <= 2 or pointWinner._hasAdvanture): 
                 self.winner = pointWinner;
-            elif (pointLoser.score == 3 and pointLoser._hasAdvanture):# 40 vs AD and the one with AD fails
+            # 40 vs AD and the one with AD fails
+            elif (pointLoser.score == 3 and pointLoser._hasAdvanture):
                 pointLoser.loseAdvantage();
                 print (pointWinner.name +  ' wins a point, ' + self.points[self.player1.score] + ' vs ' + self.points[self.player2.score]);
-            else:   #40 vs 40, set advantage
+            #40 vs 40, set advantage
+            else:   
                 pointWinner.getAdvantage();
                 print (pointWinner.name +  ' wins a point, he(she) gets the advantage ! ');
     

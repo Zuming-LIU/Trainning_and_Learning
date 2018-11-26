@@ -1,3 +1,4 @@
+# Made by Zuming LIU, the 26/11/2018
 # Define the class of a player with his name
 
 # -*- coding: utf-8 -*-
