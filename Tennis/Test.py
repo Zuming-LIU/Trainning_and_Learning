@@ -8,8 +8,8 @@ from player import Player
 from game import Game
 
 # Name 2 players for a round of tennis
-name_player1 = "ACC";
-name_player2 = "TDF";
+name_player1 = "Jack";
+name_player2 = "Bob";
 player1 = Player(name_player1)
 player2 = Player(name_player2)
 Round = Game(player1,player2)
@@ -17,14 +17,13 @@ print ("Round begins, " + name_player1 + " vs " + name_player2 + ":")
 # Loop until there is a winner
 while (Round._hasWinner() == False):    
     # Generate a random variable to find the winner of a ball
-    # 0 <= random.random() < 1, so we can take 0.5 as a half
     if (random.random() < 0.5):
         nameWinner = player1.name;
     else:
         nameWinner = player2.name;
+        
     # Calculate scores and print results
     Round.winPoint(nameWinner);
-
 
 # When a winner is founda, quit loop and end this round
 winner = Round.winner;

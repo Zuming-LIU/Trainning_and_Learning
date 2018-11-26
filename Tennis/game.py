@@ -3,7 +3,7 @@
 
 class Game:
     # Points to print according to different scores
-    points = ["Zero", "Fifteen", "Thirty", "Forty"];
+    points = ["love", "15", "30", "40"];
     
     # Initialization a game with 2 players
     def __init__(self, player1, player2):
@@ -21,7 +21,7 @@ class Game:
             pointWinner = self.player2;
             pointLoser = self.player1;
         else:
-            print("Error about a player name")
+            print("Error about a player name");
 
         # Add points and decide winner of a round
         if (pointWinner.score < 3 ): # [0 , 15, 30] vs [0 , 15, 30]
@@ -29,14 +29,14 @@ class Game:
             print (pointWinner.name +  ' wins a point, ' + self.points[self.player1.score] + ' vs ' + self.points[self.player2.score]);
 
         elif (pointWinner.score == 3):
-            if (pointLoser.score <= 2 or pointWinner._hasAdvanture): #40 vs [0 , 15, 30]
+            if (pointLoser.score <= 2 or pointWinner._hasAdvanture): #40 vs [0 , 15, 30] or 40 vs AD and the one with AD wins
                 self.winner = pointWinner;
             elif (pointLoser.score == 3 and pointLoser._hasAdvanture):# 40 vs AD and the one with AD fails
                 pointLoser.loseAdvantage();
-                print (pointWinner.name +  ' wins a point,' + self.points[self.player1.score] + ' vs ' + self.points[self.player2.score]);
+                print (pointWinner.name +  ' wins a point, ' + self.points[self.player1.score] + ' vs ' + self.points[self.player2.score]);
             else:   #40 vs 40, set advantage
                 pointWinner.getAdvantage();
-                print (pointWinner.name +  ' wins a point and he(she) gets the advantage ! ')
+                print (pointWinner.name +  ' wins a point, he(she) gets the advantage ! ');
     
         else:
             print ("Error of score, overflow");
